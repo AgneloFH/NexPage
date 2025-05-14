@@ -10,16 +10,101 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container-header">
-            <h1>NexPage</h1>
-        </div>
+        <!-- Logo -->
+        <div class="logo">NexPage</div>
+        <!-- Nav Bar -->
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Produtos</li>
+                <li>Contatos</li>
+            </ul>
     </header>
     <!-- Main -->
-    <main class="container-main">
-        <div>
-            <section>
-                <h2>Corpo da pagina</h2>
-            </section>
+    <main class="container">
+        <div class="tech-circle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <div class="list">
+            <!-- Apple Watch -->
+            <div class="item active">
+                <div class="product-img">
+                    <img src="src/images/apple-watch.png" alt="Apple Watch">
+                </div>
+
+                <div class="content">
+                    <p class="product-tag">Novo Lançamento</p>
+                    <p class="product-name">Apple Watch Series 10</p>
+                    <p class="product-description">
+                        O smartwatch mais avançado do mercado. Monitoramento de saúde, GPS integrado, tela AMOLED de
+                        alta definição. Perfeito para quem busca tecnologia e estilo.
+                    </p>
+                    <button class="btn">Saiba mais</button>
+                </div>
+            </div>
+            <!-- AirPods -->
+            <div class="item">
+                <div class="product-img">
+                    <img src="src/images/airpods.png" alt="AirPods">
+                </div>
+
+                <div class="content">
+                    <p class="product-tag">Som Premium</p>
+                    <p class="product-name">Air Pods Max</p>
+                    <p class="product-description">
+                        Experimente o som de alta fidelidade com os novos AirPods Max. Cancelamento de ruído ativo e
+                        conforto excepcional. Ideal para quem ama música e tecnologia.
+                    </p>
+                    <button class="btn">Saiba mais</button>
+                </div>
+            </div>
+            <!-- Vision Pro -->
+            <div class="item">
+                <div class="product-img">
+                    <img src="src/images/vision-pro.png" alt="Vision Pro">
+                </div>
+
+                <div class="content">
+                    <p class="product-tag">Alta Performace</p>
+                    <p class="product-name">Vision Pro</p>
+                    <p class="product-description">
+                        O headset de realidade aumentada mais avançado do mundo. Experiências imersivas e interativas
+                        com tecnologia de ponta. Transforme a maneira como você vê o mundo.
+                    </p>
+                    <button class="btn">Saiba mais</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows">
+            <button class="arrow-btn" id="previus">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-caret-left" viewBox="0 0 16 16">
+                    <path
+                        d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
+                </svg>
+            </button>
+
+            <button class="arrow-btn right" id="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-caret-right" viewBox="0 0 16 16">
+                    <path
+                        d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="indicators">
+            <div class="numbers">01</div>
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
         </div>
     </main>
 </body>
