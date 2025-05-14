@@ -1,0 +1,1 @@
+This is a personal portfolio website designed to showcase my projects, skills and career path. Created with a focus on clean design, responsiveness and intuitive navigation.
