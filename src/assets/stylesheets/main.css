@@ -47,7 +47,7 @@ header nav ul li:hover::after {
 .container {
     height: 100vh;
     position: relative;
-    background-color: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 0% 100%);
+    background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 100%);
     overflow: hidden;
 }
 
@@ -92,10 +92,18 @@ header nav ul li:hover::after {
     justify-content: center;
     align-items: center;
     opacity: 0;
+    transform: translateX(100vw);
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+.item:first-child {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .active {
     opacity: 1;
+    transform: translateX(0);
 }
 
 .product-img {
@@ -112,6 +120,15 @@ header nav ul li:hover::after {
     max-width: 80%;
     max-height: 70%;
     filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+    transform: translateX(400px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
+}
+
+.active .product-img img {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .content {
@@ -131,6 +148,15 @@ header nav ul li:hover::after {
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: transform 0.6s ease, opacity 0.3s ease;
+    transition-delay: 0.5s;
+}
+
+.active .product-tag {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .product-name {
@@ -138,7 +164,15 @@ header nav ul li:hover::after {
     font-family: "Orbitron", sans-serif;
     margin-bottom: 20px;
     line-height: 1.1;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.3s ease;
+    transition-delay: 0.5s;
+}
 
+.active .product-name {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .product-description {
@@ -147,22 +181,39 @@ header nav ul li:hover::after {
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 600px;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.3s ease;
+    transition-delay: 0.5s;
+}
+
+.active .product-description {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .btn {
     border: none;
     cursor: pointer;
     padding: 10px 18px;
-    background: linear-gradient(90deg, var(--color-sec) 0%, var(--color-pri) 100%);
+    background: linear-gradient(90deg, var(--color-sec), var(--color-pri));
     color: var(--color-white);
-    transition: width 0.9s ease;
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: 600;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: background 0.9s ease, transform 0.6s ease, opacity 0.3s ease;
+    transition-delay: 0.5s;
+}
+
+.active .btn {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .btn:hover {
-    background: linear-gradient(90deg, var(--color-pri) 0%, var(--color-sec) 100%);
+    background: linear-gradient(90deg, var(--color-pri), var(--color-sec));
 }
 
 .arrows {
@@ -183,7 +234,7 @@ header nav ul li:hover::after {
     cursor: pointer;
     color: var(--color-white);
     background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(0, 2247, 255, 0.3);
+    border: 1px solid rgba(0, 247, 255, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,7 +293,7 @@ header nav ul li:hover::after {
 .circle {
     position: absolute;
     border-radius: 50%;
-    border: 1px solid rgba(0, 2247, 255, 0.1);
+    border: 1px solid rgba(0, 247, 255, 0.1);
 }
 
 .circle:nth-child(1) {
